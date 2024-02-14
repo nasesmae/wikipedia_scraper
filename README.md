@@ -1,6 +1,6 @@
 
 # **Country Leaders Scraper**
-![Title picture](./assets/scraping.jpg)
+![Title picture](./assets/scraping.png)
 
 The Country Leaders Scraper is a Python script that collects information about country leaders from 'https://country-leaders.onrender.com'. It utilizes web scraping techniques to retrieve data on the leaders of different nations. Additionally, it scrapes the first paragraph from each leader's Wikipedia page. The scraper then saves all the retrieved data into a file named 'leaders.json'.
 
