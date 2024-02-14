@@ -1,6 +1,6 @@
 
 # **Country Leaders Scraper**
-![](https://static.javatpoint.com/python/images/web-scraping-using-python.png)
+![Title picture](./assets/scraping.jpg)
 
 The Country Leaders Scraper is a Python script that collects information about country leaders from 'https://country-leaders.onrender.com'. It utilizes web scraping techniques to retrieve data on the leaders of different nations. Additionally, it scrapes the first paragraph from each leader's Wikipedia page. The scraper then saves all the retrieved data into a file named 'leaders.json'.
 
@@ -12,8 +12,10 @@ The Country Leaders Scraper is a Python script that collects information about c
 ## Usage/Installation
 1. Clone the repository
 2. Navigate to the project directory
-3. Install the required dependencies (e.g., pip install -r requirements.txt)
-4. Run the scraper: Run main.py  
+3. Install the required dependencies 
+'''shell
+   pip install -r requirements.txt
+4. Run the scraper
 
 The scraper will commence scraping the website and gathering data. Upon completion, the data will be stored in the project directory as 'leaders.json'. 
 
