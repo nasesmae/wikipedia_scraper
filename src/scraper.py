@@ -57,7 +57,7 @@ def get_leaders():
                     for leader in leaders:
                         leader["first_paragraph"] = get_first_paragraph(leader["wikipedia_url"], session)
                         leaders_per_country[country].append(leader)
-                        print(f"The leader: {leader['first_name']} {leader['last_name']} from {leader['place_of_birth']}")
+                        print(f"The leader: {leader['first_name']} {leader['last_name']} from {leader['place_of_birth']}, {leader['wikipedia_url']}")
                         print(f"First Paragraph: {leader['first_paragraph']}")
                         print()
                 break
