@@ -80,7 +80,7 @@ def get_first_paragraph (wikipedia_url, Session):
     # Print soup.prettify
     soup = BeautifulSoup(leader_info.text, "html.parser")
     # Print paragraphs
-    paragraphs = soup.find_all("p")
+    paragraphs = soup.find('div', attrs= {"class":"mw-page-container"}).find_all("p")
 
     for paragraph in paragraphs: 
         if paragraph.text.split():
