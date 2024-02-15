@@ -98,11 +98,9 @@ Parameters:
 """
 def save(leaders_per_country):
     with open ("leaders.json", "w") as json_file: 
-        json.dump (leaders_per_country, json_file)
+        json.dump (leaders_per_country, json_file, indent = 4)
     return
 
 leaders_per_country = get_leaders()
 print(leaders_per_country)
 save(leaders_per_country)
-
-type(leaders_per_country)
