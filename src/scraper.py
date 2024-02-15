@@ -80,16 +80,18 @@ def get_first_paragraph (wikipedia_url, Session):
     # Print soup.prettify
     soup = BeautifulSoup(leader_info.text, "html.parser")
     # Print paragraphs
-    paragraphs = soup.find('div', attrs= {"class":"mw-page-container"}).find_all("p")
+    paragraphs = soup.find('div', attrs= {"class":"mw-content-ltr mw-parser-output"}).find_all("p")
 
     for paragraph in paragraphs: 
-        if paragraph.text.split():
+        if paragraph.find("b"):
             first_paragraph = paragraph.text
             break 
+            
     
     # Sanitize the first paragraph by removing unwanted elements using regex
     first_paragraph= re.sub(r"\[[0-9a-zA-Z]+\]|\xa0–|\n", ' ', first_paragraph)
     return first_paragraph
+
 
 """
 # Define a function save to save the 'leaders_per_country' dictionary as a ison file.
