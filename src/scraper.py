@@ -97,15 +97,40 @@ Parameters:
     leaders_per_country (dict): A dictionary containing data on leaders for each country.
 """
 def save(leaders_per_country):
-    with open ("leaders.json", "w") as output_file: 
-        json.dump (leaders_per_country, output_file)
+    with open ("leaders.json", "w") as json_file: 
+        json.dump (leaders_per_country, json_file)
     return
 
 leaders_per_country = get_leaders()
 print(leaders_per_country)
 save(leaders_per_country)
 
+import csv
 
+
+def save_as_csv(leaders_per_country):
+    with open("leaders.csv", "w", newline="") as csvfile:
+        fieldnames = ['Country', 'Leader']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        # Write the header
+        writer.writeheader()
+        print(type(leaders_per_country))
+        
+        # Write data rows
+        for country, leader in leaders_per_country:
+            writer.writerow({'Country': country, 'Leader': leader})
+
+# Assuming get_leaders() retrieves the leaders_per_country dictionary
+def get_leaders():
+    # Implementation of retrieving leaders_per_country
+    pass
+
+# Retrieve leaders_per_country
+leaders_per_country = get_leaders()
+
+# Save the data to a CSV file
+save_as_csv(leaders_per_country)
 
 
 
